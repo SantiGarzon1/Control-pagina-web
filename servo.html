@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Servomotor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Control de Servomotor</h1>
+
+    <label for="anguloInput">Ingrese un ángulo de 0 a 180:</label>
+    <input type="number" id="anguloInput" min="0" max="180">
+    <button onclick="enviarAngulo()">Enviar</button>
+
+    <script>
+        function enviarAngulo() {
+            var angulo = document.getElementById('anguloInput').value;
+            // Aquí puedes agregar la lógica para enviar el ángulo al servidor o realizar alguna acción
+            console.log('Ángulo enviado:', angulo);
+        }
+    </script>
+</body>
+</html>

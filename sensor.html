@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Sensor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lectura del Sensor</h1>
+
+    <p id="lecturaSensor">Valor del sensor: </p>
+
+    <script>
+        // Simulación de lectura de un sensor con actualización constante
+        setInterval(function () {
+            var valorSensor = Math.random() * 100; // Valor aleatorio entre 0 y 100
+            document.getElementById('lecturaSensor').innerText = 'Valor del sensor: ' + valorSensor.toFixed(2);
+        }, 1000); // Actualiza cada 1000 milisegundos (1 segundo)
+    </script>
+</body>
+</html>

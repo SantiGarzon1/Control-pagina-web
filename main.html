@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Seleccione una opción:</h1>
+
+    <button onclick="abrirVentana('Servomotor')">Servomotor</button>
+    <button onclick="abrirVentana('MotorDC')">Motor DC</button>
+    <button onclick="abrirVentana('Sensor')">Sensor</button>
+
+    <script>
+        function abrirVentana(opcion) {
+            var ventana;
+            switch (opcion) {
+                case 'Servomotor':
+                    ventana = window.open('servomotor.html', '_blank', 'width=400,height=300');
+                    break;
+                case 'MotorDC':
+                    ventana = window.open('motordc.html', '_blank', 'width=400,height=300');
+                    break;
+                case 'Sensor':
+                    ventana = window.open('sensor.html', '_blank', 'width=400,height=300');
+                    break;
+                default:
+                    console.error('Opción no válida');
+            }
+        }
+    </script>
+</body>
+</html>
